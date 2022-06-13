@@ -11,6 +11,10 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .hero-image {
     object-fit: contain;
 }
