@@ -1,3 +1,8 @@
+* {
+    border: 5px;
+    color: black;
+}
+
 header {
     height: 200px;
 }
