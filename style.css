@@ -1,16 +1,58 @@
 * {
-    border: 5px;
-    color: black;
+    /*border-style: solid;
+    border-width: 5px;
+    border-color: red;*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    /*border-color: orange;*/
+}
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*border-color: seagreen;*/
 }
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 p {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
-.hero-image {
-    object-fit: contain;
+figure.hero-image {
+    /*border-color: violet;*/
+    max-width: max-content;
+    position: relative;
+    height: auto;
+    margin: 0px;
+}
+
+img.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0px;
+    /*border-color: yellow;*/
+}
+
+figcaption {
+    position: absolute;
+    top: 80%;
+    width: 50%;
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    /*border-color: green;*/
+    background-color: white;;
+    opacity: 0.5;
+    font-style: italic;
 }
