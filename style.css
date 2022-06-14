@@ -20,7 +20,7 @@ header {
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: calc(16px + 20 * ((100vw - 320px) / 680));
+    font-size: calc(16px + 30 * ((100vw - 320px) / 680));
     color: lightgoldenrodyellow;
     font-weight: bold;
     text-transform: uppercase;
