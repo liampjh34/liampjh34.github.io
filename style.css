@@ -26,7 +26,7 @@ header {
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: calc(16px + 30 * ((100vw - 320px) / 680));
+    font-size: calc(40pt + 20 * ((100vw - 320px) / 680));
     color: lightgoldenrodyellow;
     font-weight: bold;
     text-transform: uppercase;
@@ -86,6 +86,28 @@ h1.relax {
     max-width: 90vw;
     font-size: calc(14px + 4 * ((100vw - 320px) / 680));
     text-align: right;
-    padding: 60vh 15vh 0vh 0vh;
+    padding: 60vh 15vw 0vh 0vh;
     margin: 0 auto;
+}
+
+h1.swim {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: none;
+    font-weight: bold;
+    color: darkslategray;
+    /*min-width: 50vw;
+    max-width: 90vw;*/
+    font-size: calc(14px + 4 * ((100vw - 320px) / 680));
+    text-align: left;
+    padding: 0vh 0vw 0vh 10vw;
+    position: absolute;
+    top: 10%;
+}
+
+#swimcontainer {
+    position: relative;
+}
+
+video {
+    width: 100% !important;
 }
