@@ -5,6 +5,11 @@
     font-family: Arial, Helvetica, sans-serif; 
 } */
 
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+
 body {
     margin: 0px;
     padding: 0px;
@@ -13,8 +18,9 @@ body {
 
 header {
     background-color: darkolivegreen;
-    padding-top: 20px;
+    padding-top: 0px;
     padding-bottom: 20px;
+    margin-bottom: 0px;
     /*border-color: seagreen;*/
 }
 
@@ -25,43 +31,61 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+    padding: 20px 0px;
+    margin: 0px
 }
 
 p {
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     color: white;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 5px 20px;
+    margin: 0px;
 }
 
-figure.hero-image {
-    /*border-color: violet;*/
-    max-width: max-content;
+#cliffside {
+    background-image: url("./images/cliffside.png");
+    background-size: cover;
+    height: 50vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+    padding-top: 0px;
     position: relative;
-    height: auto;
-    margin: 0px;
 }
 
-img.hero-image {
-    max-width: 100%;
-    height: auto;
-    margin: 0px;
-    /*border-color: yellow;*/
-}
-
-figcaption {
-    position: absolute;
-    top: 80%;
-    width: 50%;
-    text-align: left;
-    padding-left: 5%;
-    padding-top: 5px;
-    padding-right: 0px;
-    padding-bottom: 5px;
-    /*border-color: green;*/
-    background-color: white;;
-    opacity: 0.5;
-    font-style: italic;
+h1.cliffside {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: none;
+    color: gray;
+    min-width: 50vw;
+    max-width: 90vw;
+    font-size: calc(14px + 4 * ((100vw - 320px) / 680));
+    text-align: left;
+    padding: 25px 0px 0px 0px;
+    margin: 0 auto;
+}
+
+#relax {
+    background-image: url("./images/relax.jpeg");
+    background-size: cover;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+    padding-top: 0px;
+    position: relative;
+}
+
+h1.relax {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: none;
+    font-weight: bold;
+    color: white;
+    min-width: 50vw;
+    max-width: 90vw;
+    font-size: calc(14px + 4 * ((100vw - 320px) / 680));
+    text-align: right;
+    padding: 60vh 15vh 0vh 0vh;
+    margin: 0 auto;
 }
