@@ -67,6 +67,8 @@ ul {
     font-size: 1rem;
     border-color: white;
     color: #ffffff;
+    float: right;
+    padding-right: 5%;
 }
 
 /* Navigation components for mobile */
