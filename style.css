@@ -48,13 +48,10 @@ header {
 #nav-container {
     grid-area: 1 / 2 / span 1 / span 1;
     border-color: lime;
-    padding-right: 10%;
-    position: relative;
 }
 
 ul > li {
     display: inline;
-    position: absolute;
     text-transform: uppercase;
     border-color: purple;
     width: 100%;
