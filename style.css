@@ -30,8 +30,10 @@ header {
 #website-name-container {
     grid-area: 1 / 1 / span 1 / span 1;
     border-color: aqua;
-    display: inline;
+    display: flex;
+    align-items: center;
     position: relative;
+    padding-left: 3%;
 }
 
 .website-name {
