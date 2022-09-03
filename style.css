@@ -200,6 +200,14 @@ p, .opener-text {
     padding: 5px;
 }
 
+
+
+/* Map embed */
+
+#map {
+    width: 100%;
+}
+
 /* custom font(s) */
 
 @font-face {
