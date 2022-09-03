@@ -38,7 +38,7 @@ header {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: clamp(1.25rem, 2vw + 1rem, 2.25rem);
     color: lightgoldenrodyellow;
     text-transform: lowercase;
     text-align: center;
