@@ -1,14 +1,9 @@
-/* * {
-    border-style: solid;
-    border-width: 5px;
-    border-color: red;
-    font-family: Arial, Helvetica, sans-serif; 
-} */
-
 * {
-    margin: 0px;
-    padding: 0px;
-  }
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    font-family: 'Raleway', sans-serif;
+}
 
 body {
     margin: 0px;
@@ -17,37 +12,86 @@ body {
 }
 
 header {
-    background-color: darkolivegreen;
-    padding-top: 0px;
-    padding-bottom: 20px;
-    margin-bottom: 0px;
-    /*border-color: seagreen;*/
+    background-color: #E1A768;
+    border-color: magenta;
+    border-width: 8px;
+    padding: 1rem 0;
 }
+
+/* Navigation components for desktop */
+
+#nav-grid {
+    display: grid;
+    width: 100%;
+    border-color: orange;
+    grid-template-columns: 1fr 1fr;
+}
+
+#website-name-container {
+    grid-area: 1 / 1 / span 1 / span 1;
+    border-color: aqua;
+    display: inline;
+    position: relative;
+}
+
+.website-name {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2rem;
+    color: lightgoldenrodyellow;
+    text-transform: lowercase;
+    text-align: center;
+    position: absolute;
+}
+
+#nav-container {
+    grid-area: 1 / 2 / span 1 / span 1;
+    border-color: lime;
+    padding-right: 10%;
+    position: relative;
+}
+
+ul > li {
+    display: inline;
+    position: absolute;
+    text-transform: uppercase;
+    border-color: purple;
+    width: 100%;
+    top: 50%;
+    bottom: 50%;
+}
+
+ul {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border-color: white;
+    color: #ffffff;
+}
+
+/* Navigation components for mobile */
+
+
+
+
+/* Main body for desktop */
 
 h1 {
-    font-family: gilbert-color, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: calc(40pt + 20 * ((100vw - 320px) / 680));
+    font-size: 3rem;
     color: lightgoldenrodyellow;
-    text-transform: uppercase;
+    text-transform: lowercase;
     text-align: center;
-    padding: 20px 0px;
+    padding: 0px 0px;
     margin: 0px
-}
-
-p {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    color: white;
-    padding: 5px 20px;
-    margin: 0px;
 }
 
 #cliffside {
     background-image: url("./images/cliffside.png");
     background-size: cover;
-    height: 50vh;
     background-position: center center;
     background-repeat: no-repeat;
     margin-top: 0px;
@@ -59,8 +103,6 @@ h1.cliffside {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-transform: none;
     color: gray;
-    min-width: 50vw;
-    max-width: 90vw;
     font-size: calc(14px + 4 * ((100vw - 320px) / 680));
     text-align: left;
     padding: 25px 0px 0px 0px;
@@ -83,8 +125,6 @@ h1.relax {
     text-transform: none;
     font-weight: bold;
     color: white;
-    min-width: 50vw;
-    max-width: 90vw;
     font-size: calc(14px + 4 * ((100vw - 320px) / 680));
     text-align: right;
     padding: 60vh 15vw 0vh 0vh;
@@ -96,8 +136,6 @@ h1.swim {
     text-transform: none;
     font-weight: bold;
     color: darkslategray;
-    /*min-width: 50vw;
-    max-width: 90vw;*/
     font-size: calc(14px + 4 * ((100vw - 320px) / 680));
     text-align: left;
     padding: 0vh 0vw 0vh 10vw;
@@ -113,7 +151,59 @@ video {
     width: 100% !important;
 }
 
+
+/* Main body for website */
+
+#opener {
+    background-image: url("./images/manarola_2.jpeg");
+    background-size: cover;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#opener-grid {
+    display:grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+#opener-text-row {
+    display: inline;
+    grid-area: 1 / 1 / span 1 / span 1;
+    width: 70%;
+    margin: auto;
+}
+
+#opener-image-grid {
+    display: inline;
+    padding: 5%;
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+#opener-image {
+    width: 100%;
+}
+
+p {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+p, .opener-text {
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    transform: rotate(-5deg);
+    font-size: calc(1rem + 4 * ((100vw - 320px) / 680));
+    padding: 5px;
+}
+
+/* custom font(s) */
+
 @font-face {
     font-family: "gilbert-color";
     src: url("./fonts/Gilbert-Color\ Bold\ Preview5.otf");
-    }
+}
