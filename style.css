@@ -1,5 +1,5 @@
 * {
-    /* border-style: solid;
+    /*border-style: solid;
     border-width: 1px;
     border-color: red; */
     font-family: 'Raleway', sans-serif;
@@ -118,50 +118,26 @@ p.opener-text {
 /* Body grid */
 
 #body-grid {
-    display: grid;
-    border-color: mediumpurple;
-    border-width: 10px;
-    width: auto;
-    justify-items: stretch;
-    justify-content: center;
-    margin: auto;
-    padding: 2%;
     background-image: linear-gradient(to right bottom, #ffffff, #fff7fe, #ffedf1, #ffe6d9, #ffe5c0, #ffe5c0, #ffe5c0, #ffe5c0, #ffe6d9, #ffedf1, #fff7fe, #ffffff);
-}
-
-#cliffside-grid-item {
-    display: inline;
-    border-color: blue;
+    border-color: purple;
     border-width: 10px;
-    margin: 2%;
-    background-image: url("./images/cliffside.png");
-    background-size: cover;
 }
 
-#company-grid-item {
-    display: inline;
-    border-color: green;
-    border-width: 10px;
-    margin: 2%;
-    background-image: url("./images/relax.jpeg");
-    background-size: cover;
-}
-
-#swimming-grid-item {
-    display: inline;
-    border-color: palevioletred;
-    border-width: 10px;
-    margin: 2%;
-    background-image: url("./images/swimming.jpeg");
-    background-size: cover;
-}
-
-p.grid-item {
+/* p.grid-item {
     color: #666262;
     text-align: left;
     margin: 2%;
+} */
+
+.grid-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
+p.body-grid-text {
+    color: #68A2E1;
+}
 
 /* custom font(s) */
 
@@ -197,22 +173,28 @@ p.grid-item {
     }
 
     #body-grid {
-        grid-template-columns: repeat(1, 270px);
-        grid-template-rows: repeat(3, 270px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 0% 0% 5% 0%;
     }
 
-    #cliffside-grid-item {
-        grid-area: 1 / 1 / span 1 / span 1;
+    .body-grid-image-container {
+        height: 200px;
+        width: 200px;
+    }
 
+    .body-grid-text-container {
+        height: auto;
+        width: 175px;
     }
-    
-    #company-grid-item {
-        grid-area: 2 / 1 / span 1 / span 1;
-    }
-    
-    #swimming-grid-item {
-        grid-area: 3 / 1 / span 1 / span 1;
-    }
+
+    .grid-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    };
 
     p.grid-item {
         font-size: 0.75rem;
@@ -247,33 +229,63 @@ p.grid-item {
     }
 
     #body-grid {
-        grid-template-columns: repeat(3, 160px);
-        grid-template-rows: repeat(1, 160px);
-        padding: 7% 0% 2% 0%;
+        display: grid;
+        grid-template: repeat(2, auto) / repeat(3, 150px);
+        justify-items: stretch;
+        justify-content: center;
+        padding: 5% 0% 5% 0%;
     }
 
-    #cliffside-grid-item {
+    .body-grid-image-container {
+        border-color: pink;
+        border-width: 3px;
+        height: auto;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .grid-image {
+        height: 145px;;
+        width: 145px;
+    }
+
+    .body-grid-text-container {
+        height: auto;
+        width: auto;
+        border-color: lime;
+        border-width: 3px;
+    }
+
+    .body-grid-text {
+        margin: 5% 0%;
+    }
+
+    #cliffside-text-container {
         grid-area: 1 / 1 / span 1 / span 1;
-        position: relative;
     }
-    
-    #company-grid-item {
+
+    #cliffside-image-container {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+
+    #company-text-container {
         grid-area: 1 / 2 / span 1 / span 1;
-        position: relative;
     }
-    
-    #swimming-grid-item {
+
+    #company-image-container {
+        grid-area: 2 / 2 / span 1 / span 1;
+    }
+
+    #swimming-text-container {
         grid-area: 1 / 3 / span 1 / span 1;
-        position: relative;
+    }
+
+    #swimming-image-container {
+        grid-area: 2 / 3 / span 1 / span 1;
     }
 
     p.grid-item {
         font-size: 0.75rem;
-        position: absolute;
-        top: -25%;
-        width: 100%;
-        left: 0px;
-        text-align: center;
     }
 
 }
@@ -304,21 +316,12 @@ p.grid-item {
     }
 
     #body-grid {
-        grid-template-columns: repeat(3, 250px);
-        grid-template-rows: repeat(1, 250px);
+        grid-template: repeat(2, auto) / repeat(3, 250px);
     }
 
-    #cliffside-grid-item {
-        grid-area: 1 / 1 / span 1 / span 1;
-
-    }
-    
-    #company-grid-item {
-        grid-area: 1 / 2 / span 1 / span 1;
-    }
-    
-    #swimming-grid-item {
-        grid-area: 1 / 3 / span 1 / span 1;
+    .grid-image {
+        height: 230px;
+        width: 230px;
     }
 
     p.grid-item {
@@ -348,8 +351,12 @@ p.grid-item {
     }
 
     #body-grid {
-        grid-template-columns: repeat(3, 340px);
-        grid-template-rows: repeat(1, 340px);
+        grid-template: repeat(2, auto) / repeat(3, 320px);
+    }
+
+    .grid-image {
+        height: 300px;
+        width: 300px;
     }
 
 }
