@@ -42,7 +42,7 @@ header {
     font-weight: 900;
     font-size: clamp(1.438rem, 2vw + 1rem, 3.125rem);
     color: lightgoldenrodyellow;
-    text-transform: lowercase;
+    text-transform: uppercase;
     text-align: left;
     position: absolute;
     width: 100%;
