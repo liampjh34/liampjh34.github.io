@@ -1,7 +1,7 @@
 * {
-    border-style: solid;
+    /* border-style: solid;
     border-width: 1px;
-    border-color: red;
+    border-color: red; */
     font-family: 'Raleway', sans-serif;
 }
 
@@ -22,7 +22,7 @@ header {
 
 #nav-grid {
     display: grid;
-    width: 100%;
+    width: auto;
     border-color: orange;
     grid-template-columns: 1fr 1fr;
 }
@@ -57,9 +57,7 @@ ul > li {
     display: inline;
     text-transform: uppercase;
     border-color: purple;
-    width: 100%;
-    top: 50%;
-    bottom: 50%;
+    width: auto;
 }
 
 ul {
@@ -74,85 +72,6 @@ ul {
 
 /* Navigation components for mobile */
 
-
-
-
-/* Main body for desktop */
-
-/* deletion proposal
-h1 {
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 3rem;
-    color: lightgoldenrodyellow;
-    text-transform: lowercase;
-    text-align: center;
-    padding: 0px 0px;
-    margin: 0px
-}
-
-#cliffside {
-    background-image: url("./images/cliffside.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin-top: 0px;
-    padding-top: 0px;
-    position: relative;
-}
-
-h1.cliffside {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-transform: none;
-    color: gray;
-    font-size: calc(14px + 4 * ((100vw - 320px) / 680));
-    text-align: left;
-    padding: 25px 0px 0px 0px;
-    margin: 0 auto;
-}
-
-#relax {
-    background-image: url("./images/relax.jpeg");
-    background-size: cover;
-    height: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin-top: 0px;
-    padding-top: 0px;
-    position: relative;
-}
-
-h1.relax {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-transform: none;
-    font-weight: bold;
-    color: white;
-    font-size: calc(14px + 4 * ((100vw - 320px) / 680));
-    text-align: right;
-    padding: 60vh 15vw 0vh 0vh;
-    margin: 0 auto;
-}
-
-h1.swim {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-transform: none;
-    font-weight: bold;
-    color: darkslategray;
-    font-size: calc(14px + 4 * ((100vw - 320px) / 680));
-    text-align: left;
-    padding: 0vh 0vw 0vh 10vw;
-    position: absolute;
-    top: 10%;
-}
-
-#swimcontainer {
-    position: relative;
-}
-
-*/
-
-
 /* Main body for website */
 
 /* Opener section */
@@ -160,7 +79,7 @@ h1.swim {
 #opener {
     background-image: url("./images/manarola_2.jpeg");
     background-size: cover;
-    width: 100%;
+    width: auto;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -196,22 +115,7 @@ p {
     transform: rotate(0deg);
 }
 
-p, .cliffside {
-    background-color: blue;
-    transform: rotate(0deg);
-}
-
-p, .company {
-    background-color: magenta;
-    transform: rotate(0deg);
-}
-
-p, .swimming {
-    background-color: lime;
-    transform: rotate(0deg);
-}
-
-p, .opener-text {
+p.opener-text {
     background-color: darkslategray;
     text-align: center;
     transform: rotate(-5deg);
@@ -223,29 +127,61 @@ p, .opener-text {
 
 #body-grid {
     display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(2, 300px);
-    gap: 5%;
+    border-color: mediumpurple;
+    border-width: 10px;
+    width: auto;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(1, 400px);
+    justify-items: stretch;
     justify-content: center;
+    margin: auto;
+    padding: 2%;
+    background-image: linear-gradient(to right bottom, #ffffff, #fff7fe, #ffedf1, #ffe6d9, #ffe5c0, #ffe5c0, #ffe5c0, #ffe5c0, #ffe6d9, #ffedf1, #fff7fe, #ffffff);
 }
 
-.grid-item {
+#cliffside-grid-item {
     display: inline;
+    border-color: blue;
+    border-width: 10px;
+    grid-area: 1 / 1 / span 1 / span 1;
+    margin: 2%;
+    background-image: url("./images/cliffside.png");
+    background-size: cover;
 }
 
-#grid-image {
+#company-grid-item {
+    display: inline;
+    border-color: green;
+    border-width: 10px;
+    grid-area: 1 / 2 / span 1 / span 1;
+    padding: 2%;
+}
+
+#swimming-grid-item {
+    display: inline;
+    border-color: palevioletred;
+    border-width: 10px;
+    grid-area: 1 / 3 / span 1 / span 1;
+    padding: 2%;
+}
+
+img.grid-image {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    padding: 5%;
 }
 
 .grid-video {
     width: 100% !important;
     object-fit: cover;
     height: 100%;
-    padding: 5%;
+}
+
+p.grid-item {
+    background-color: darkgoldenrod;
+    text-align: left;
+    font-size: calc(1rem + 4 * ((100vw - 320px) / 680));
+    margin: 2%;
 }
 
 /* Map embed */
