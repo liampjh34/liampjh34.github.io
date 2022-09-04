@@ -3,26 +3,25 @@
     border-width: 1px;
     border-color: red; */
     font-family: 'Raleway', sans-serif;
+    font-size: 16pt;
 }
 
 body {
     margin: 0px;
     padding: 0px;
-    /*border-color: orange;*/
 }
 
 header {
     background-color: #E1A768;
     border-color: magenta;
-    border-width: 8px;
-    padding: 1rem 0;
+    border-width: 3px;
+    padding: 2% 0;
 }
 
 /* Navigation components for desktop */
 
 #nav-grid {
     display: grid;
-    width: auto;
     border-color: orange;
     grid-template-columns: 1fr 1fr;
 }
@@ -33,7 +32,6 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    margin-left: 3%;
 }
 
 .website-name {
@@ -87,20 +85,16 @@ ul {
 #opener-grid {
     display:grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr;
 }
 
 #opener-text-row {
     display: inline;
-    grid-area: 1 / 1 / span 1 / span 1;
     width: 70%;
     margin: auto;
 }
 
 #opener-image-grid {
     display: inline;
-    padding: 5%;
-    grid-area: 1 / 2 / span 1 / span 1;
 }
 
 #opener-image {
@@ -109,7 +103,6 @@ ul {
 
 p {
     font-weight: 700;
-    font-size: 2rem;
     text-align: center;
     color: white;
     transform: rotate(0deg);
@@ -119,7 +112,6 @@ p.opener-text {
     background-color: darkslategray;
     text-align: center;
     transform: rotate(-5deg);
-    font-size: calc(1rem + 4 * ((100vw - 320px) / 680));
     padding: 5px;
 }
 
@@ -130,8 +122,6 @@ p.opener-text {
     border-color: mediumpurple;
     border-width: 10px;
     width: auto;
-    grid-template-columns: repeat(3, 400px);
-    grid-template-rows: repeat(1, 400px);
     justify-items: stretch;
     justify-content: center;
     margin: auto;
@@ -143,7 +133,6 @@ p.opener-text {
     display: inline;
     border-color: blue;
     border-width: 10px;
-    grid-area: 1 / 1 / span 1 / span 1;
     margin: 2%;
     background-image: url("./images/cliffside.png");
     background-size: cover;
@@ -153,7 +142,6 @@ p.opener-text {
     display: inline;
     border-color: green;
     border-width: 10px;
-    grid-area: 1 / 2 / span 1 / span 1;
     margin: 2%;
     background-image: url("./images/relax.jpeg");
     background-size: cover;
@@ -163,16 +151,14 @@ p.opener-text {
     display: inline;
     border-color: palevioletred;
     border-width: 10px;
-    grid-area: 1 / 3 / span 1 / span 1;
     margin: 2%;
     background-image: url("./images/swimming.jpeg");
     background-size: cover;
 }
 
 p.grid-item {
-    background-color: hotpink;
+    color: #666262;
     text-align: left;
-    font-size: calc(1rem + 4 * ((100vw - 320px) / 680));
     margin: 2%;
 }
 
@@ -182,4 +168,188 @@ p.grid-item {
 @font-face {
     font-family: "gilbert-color";
     src: url("./fonts/Gilbert-Color\ Bold\ Preview5.otf");
+}
+
+/* Responsive design for mobile devices */
+
+@media only screen and (max-width: 480px) {
+
+    #website-name-container {
+        margin-left: 5%;
+    }
+
+    #opener-grid {
+        grid-template-rows: auto;
+    }
+
+    #opener-text-row {
+        grid-area: 2 / 1 / span 1 / span 1;
+        padding: 2%;
+    }
+
+    p.opener-text {
+        font-size: 0.75rem;
+    }
+    
+    #opener-image-grid {
+        grid-area: 1 / 1 / span 1 / span 1;
+        padding: 5% 5% 2% 5%;
+    }
+
+    #body-grid {
+        grid-template-columns: repeat(1, 270px);
+        grid-template-rows: repeat(3, 270px);
+    }
+
+    #cliffside-grid-item {
+        grid-area: 1 / 1 / span 1 / span 1;
+
+    }
+    
+    #company-grid-item {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+    
+    #swimming-grid-item {
+        grid-area: 3 / 1 / span 1 / span 1;
+    }
+
+    p.grid-item {
+        font-size: 0.75rem;
+    }
+
+}
+
+/* Responsive design for tablets */
+
+@media only screen and (min-width: 481px) {
+
+    #website-name-container {
+        margin-left: 5%;
+    }
+
+    #opener-grid {
+        grid-template-rows: auto;
+    }
+
+    #opener-text-row {
+        grid-area: 2 / 1 / span 1 / span 1;
+        padding: 2%;
+    }
+
+    p.opener-text {
+        font-size: 0.75rem;
+    }
+    
+    #opener-image-grid {
+        grid-area: 1 / 1 / span 1 / span 1;
+        padding: 5% 5% 2% 5%;
+    }
+
+    #body-grid {
+        grid-template-columns: repeat(3, 160px);
+        grid-template-rows: repeat(1, 160px);
+        padding: 7% 0% 2% 0%;
+    }
+
+    #cliffside-grid-item {
+        grid-area: 1 / 1 / span 1 / span 1;
+        position: relative;
+    }
+    
+    #company-grid-item {
+        grid-area: 1 / 2 / span 1 / span 1;
+        position: relative;
+    }
+    
+    #swimming-grid-item {
+        grid-area: 1 / 3 / span 1 / span 1;
+        position: relative;
+    }
+
+    p.grid-item {
+        font-size: 0.75rem;
+        position: absolute;
+        top: -25%;
+        width: 100%;
+        left: 0px;
+        text-align: center;
+    }
+
+}
+
+/* Responsive design for smaller computers */
+
+@media only screen and (min-width: 769px) {
+
+    #website-name-container {
+        margin-left: 3%;
+    }
+
+    #opener-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #opener-text-row {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    p.opener-text {
+        font-size: 1rem;
+    }
+    
+    #opener-image-grid {
+        grid-area: 1 / 2 / span 1 / span 1;
+        padding: 5%;
+    }
+
+    #body-grid {
+        grid-template-columns: repeat(3, 250px);
+        grid-template-rows: repeat(1, 250px);
+    }
+
+    #cliffside-grid-item {
+        grid-area: 1 / 1 / span 1 / span 1;
+
+    }
+    
+    #company-grid-item {
+        grid-area: 1 / 2 / span 1 / span 1;
+    }
+    
+    #swimming-grid-item {
+        grid-area: 1 / 3 / span 1 / span 1;
+    }
+
+    p.grid-item {
+        font-size: 1rem;
+    }
+
+}
+
+/* Responsive design for even bigger devices */
+
+@media only screen and (min-width: 1025px) {
+
+    #website-name-container {
+        margin-left: 3%;
+    }
+
+    #opener-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #opener-text-row {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+    
+    #opener-image-grid {
+        grid-area: 1 / 2 / span 1 / span 1;
+    }
+
+    #body-grid {
+        grid-template-columns: repeat(3, 340px);
+        grid-template-rows: repeat(1, 340px);
+    }
+
 }
